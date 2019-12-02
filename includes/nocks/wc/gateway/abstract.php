@@ -492,24 +492,21 @@ abstract class Nocks_WC_Gateway_Abstract extends WC_Payment_Gateway
 		    Nocks_WC_Plugin::debug($this->id . ": Nocks payment {$transaction->id} webhook call for order {$order->get_id()}.", true);
 	    }
 
-        $method_name = 'onWebhook' . ucfirst($transaction->status);
-
-        if (method_exists($this, $method_name))
-        {
-            $this->{$method_name}($order, $transaction);
-        }
-        else
-        {
-            $order->add_order_note(sprintf(
-            /* translators: Placeholder 1: payment method title, placeholder 2: payment status, placeholder 3: payment ID */
-                __('%s payment %s (%s).', 'nocks-crypto-for-woocommerce'),
-                $this->method_title,
-                $payment->status,
-                $payment->id . ($payment->mode == 'test' ? (' - ' . __('test mode', 'nocks-crypto-for-woocommerce')) : '')
-            ));
-        }
-
-        // Status 200
+	    if ($transaction->isPaid()) {
+	    	$this->onWebhookCompleted($order, $transaction);
+	    } else if ($transaction->isCancelled()) {
+		    $this->onWebhookCancelled($order, $transaction);
+	    } else if ($transaction->isExpired()) {
+	    	$this->onWebhookExpired($order, $transaction);
+	    } else {
+		    $order->add_order_note(sprintf(
+		    /* translators: Placeholder 1: payment method title, placeholder 2: payment status, placeholder 3: payment ID */
+			    __('%s payment %s (%s).', 'nocks-crypto-for-woocommerce'),
+			    $this->method_title,
+			    $payment->status,
+			    $payment->id . ($payment->mode == 'test' ? (' - ' . __('test mode', 'nocks-crypto-for-woocommerce')) : '')
+		    ));
+	    }
     }
 
     /**
@@ -533,11 +530,10 @@ abstract class Nocks_WC_Gateway_Abstract extends WC_Payment_Gateway
 
     /**
      * @param WC_Order $order
-     * @param Nocks_Payment $payment
+     * @param $transaction
      */
-    protected function onWebhookCompleted(WC_Order $order, $payment)
+    protected function onWebhookCompleted(WC_Order $order, $transaction)
     {
-
 	    // Get order ID in the correct way depending on WooCommerce version
 	    if ( version_compare( WC_VERSION, '3.0', '<' ) ) {
 		    $order_id = $order->id;

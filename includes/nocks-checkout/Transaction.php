@@ -2,12 +2,8 @@
 
 class Nocks_Transaction
 {
-
-    protected $paid = false;
-    public $metadata;
     public $id;
     public $status;
-
 
     function __construct($data) {
         if (isset($data['data'])) {
@@ -19,7 +15,7 @@ class Nocks_Transaction
     }
 
     function isPaid() {
-        return $this->status === 'success';
+        return $this->status === 'completed' || $this->status === 'paid';
     }
 
     function isOpen() {
@@ -30,5 +26,7 @@ class Nocks_Transaction
         return $this->status === 'cancelled';
     }
 
-
+	function isExpired() {
+    	return $this->status === 'expired';
+	}
 }
