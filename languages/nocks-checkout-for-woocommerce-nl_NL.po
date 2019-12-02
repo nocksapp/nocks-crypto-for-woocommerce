@@ -1,0 +1,56 @@
+msgid "Gulden"
+msgstr "Gulden"
+
+msgid "Pay with Gulden"
+msgstr "Betaal met Gulden"
+
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+msgid "Pay with Bitcoin"
+msgstr "Betaal met Bitcoin"
+
+msgid "Litecoin"
+msgstr "Litecoin"
+
+msgid "Pay with Litecoin"
+msgstr "Betaal met Litecoin"
+
+msgid "Ethereum"
+msgstr "Ethereum"
+
+msgid "Pay with Ethereum"
+msgstr "Betaal met Ethereum"
+
+msgid "Estimated total amount of Gulden: "
+msgstr "Geschatte Gulden bedrag: "
+
+msgid "We cannot calculate the amount of Guldens at this moment."
+msgstr "We kunnen het Gulden bedrag op dit moment niet berekenen."
+
+msgid "Estimated total amount of Bitcoin: "
+msgstr "Geschatte Bitcoin bedrag: "
+
+msgid "We cannot calculate the amount of Bitcoins at this moment."
+msgstr "We kunnen het Bitcoin bedrag op dit moment niet berekenen."
+
+msgid "Estimated total amount of Litecoin: "
+msgstr "Geschatte Litecoin bedrag: "
+
+msgid "We cannot calculate the amount of Litecoins at this moment."
+msgstr "We kunnen het Litecoin bedrag op dit moment niet berekenen."
+
+msgid "Estimated total amount of Ethereum: "
+msgstr "Geschatte Ethereum bedrag: "
+
+msgid "We cannot calculate the amount of Ethereums at this moment."
+msgstr "We kunnen het Ethereum bedrag op dit moment niet berekenen."
+
+msgid "Your payment has been cancelled."
+msgstr "Uw betaling is geannuleerd"
+
+msgid "We have not received a definite payment status. You will receive an email as soon as we receive a confirmation."
+msgstr "We hebben nog geen betaling ontvangen. U zal een mail ontvangen zodra we bevestiging hebben."
+
+msgid "Payment completed with <strong>%s</strong>"
+msgstr "Betaling afgerond met <strong>%s</strong>"

@@ -1,0 +1,56 @@
+msgid "Gulden"
+msgstr "Gulden"
+
+msgid "Pay with Gulden"
+msgstr "Pay with Gulden"
+
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+msgid "Pay with Bitcoin"
+msgstr "Pay with Bitcoin"
+
+msgid "Litecoin"
+msgstr "Litecoin"
+
+msgid "Pay with Litecoin"
+msgstr "Pay with Litecoin"
+
+msgid "Ethereum"
+msgstr "Ethereum"
+
+msgid "Pay with Ethereum"
+msgstr "Pay with Ethereum"
+
+msgid "Estimated total amount of Gulden: "
+msgstr "Estimated total amount of Gulden: "
+
+msgid "We cannot calculate the amount of Guldens at this moment."
+msgstr "We cannot calculate the amount of Guldens at this moment."
+
+msgid "Estimated total amount of Bitcoin: "
+msgstr "Estimated total amount of Bitcoin: "
+
+msgid "We cannot calculate the amount of Bitcoins at this moment."
+msgstr "We cannot calculate the amount of Bitcoins at this moment."
+
+msgid "Estimated total amount of Litecoin: "
+msgstr "Estimated total amount of Litecoin: "
+
+msgid "We cannot calculate the amount of Litecoins at this moment."
+msgstr "We cannot calculate the amount of Litecoins at this moment."
+
+msgid "Estimated total amount of Ethereum: "
+msgstr "Estimated total amount of Ethereum: "
+
+msgid "We cannot calculate the amount of Ethereums at this moment."
+msgstr "We cannot calculate the amount of Ethereums at this moment."
+
+msgid "Your payment has been cancelled."
+msgstr "Your payment has been cancelled."
+
+msgid "We have not received a definite payment status. You will receive an email as soon as we receive a confirmation."
+msgstr "We have not received a definite payment status. You will receive an email as soon as we receive a confirmation."
+
+msgid "Payment completed with <strong>%s</strong>"
+msgstr "Payment completed with <strong>%s</strong>"
